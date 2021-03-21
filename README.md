@@ -2,7 +2,7 @@
 
 Kódmagyarázat
 
-# PrefixTrie osztály:
+ # PrefixTrie osztály:
    Ez az az osztály, ami segít a bináris prefix fa felépítésében, tárolásában.
    Egy csomópont tartalmazza a nexthop azonosítót és pointereket a leszármazottakra.
    Függvényei (konstruktoron és destruktoron kívül):
@@ -25,11 +25,11 @@ Kódmagyarázat
    - getCount() : visszaadja a nexthop tábla méretét
 
 
-# Trunk struktúra, showTrunks(), printTree()
+ # Trunk struktúra, showTrunks(), printTree()
    Ezek nem általam írt kódrészletek, a prefix fa kiíratásához használtam, hogy strukturáltan tudjam kiíratni a könnyebb ellenőrizhetőségért
  
  
-# EntropyPasses osztály:
+ # EntropyPasses osztály:
  Ez az osztály tartamazza azokat a függvényeket, lépéseket, amik az entópiakiszámításhoz szükségesek.
  Ezen osztály egyik függvényéhez(pass_three_bfs) volt szükség a pass3_return_type struktúra bevezetésére (lásd a függvény tárgyalásában)
  Függvényei:
@@ -70,8 +70,12 @@ Kódmagyarázat
         Ebben a függvényben az entrópia számításhoz megadott képleteket használjuk.
         H(S_alfa) = 2 + summa(p_i*log_2(1/p_i));
         p_i - az adott azonosító előfordulása a végső fában ( képlete : i azonosító előfordulása/összes levél darabszáma)
+   - getLeafsCount(PrefixTrie* node);
+   - getNodesCount(PrefixTrie* node);
+   - getNonEmptyNodesCount(PrefixTrie* node);
 
 # Main függvény:
+NEM UP TO DATE, FRISSITENI KELL
 Itt történik az osztályok példányosítása, a beolvasás és a megfelelő függvények meghívása.
 Beolvasás:
 -soronként olvasunk be
