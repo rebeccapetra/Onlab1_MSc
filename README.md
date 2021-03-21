@@ -2,7 +2,7 @@
 
 Kódmagyarázat
 
- # PrefixTrie osztály:
+ # class PrefixTrie:
    Ez az az osztály, ami segít a bináris prefix fa felépítésében, tárolásában.
    Egy csomópont tartalmazza a nexthop azonosítót és pointereket a leszármazottakra.
    Függvényei (konstruktoron és destruktoron kívül):
@@ -15,7 +15,7 @@ Kódmagyarázat
    - addNewIP(root, ip, mask, index) : a beolvasás során ez a függvény adja hozzá a fához az új IP címeket és írja bele a nexthop azonosítót ha van
 	
   
- # HopTable osztály:
+ # class HopTable:
    Ez az osztály tárolja a nexthopokat és a hozzájuk tartozó azonosítókat, illetve az ezek használatához szükséges fontosabb függvényeket
    A nexthop-azonosító párosok egy std::vector tömbben vannak eltárolva. Az azonosító esetünkben az index lesz. pl. HopTable[1] = 2345 (2345 a nexthop IP-cím, 1 az azonosító)
    Függvényei:
@@ -25,11 +25,11 @@ Kódmagyarázat
    - getCount() : visszaadja a nexthop tábla méretét
 
 
- # Trunk struktúra, showTrunks(), printTree()
+ # struct Trunk, showTrunks(), printTree()
    Ezek nem általam írt kódrészletek, a prefix fa kiíratásához használtam, hogy strukturáltan tudjam kiíratni a könnyebb ellenőrizhetőségért
  
  
- # EntropyPasses osztály:
+ # class EntropyPasses:
  Ez az osztály tartamazza azokat a függvényeket, lépéseket, amik az entópiakiszámításhoz szükségesek.
  Ezen osztály egyik függvényéhez(pass_three_bfs) volt szükség a pass3_return_type struktúra bevezetésére (lásd a függvény tárgyalásában)
  Függvényei:
@@ -74,7 +74,10 @@ Kódmagyarázat
    - getNodesCount(PrefixTrie* node);
    - getNonEmptyNodesCount(PrefixTrie* node);
 
-# Main függvény:
+# class Lookup:
+   - lookup_forIP(uint32_t address, sdsl::rrr_vector<63> Si, sdsl::wt_huff_int<sdsl::rrr_vector<63>> Salfa, sdsl::rrr_vector<>::rank_0_type Si_rank0, sdsl::rrr_vector<>::rank_1_type Si_rank1);
+
+# Main:
 NEM UP TO DATE, FRISSITENI KELL
 Itt történik az osztályok példányosítása, a beolvasás és a megfelelő függvények meghívása.
 Beolvasás:
